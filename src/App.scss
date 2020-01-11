@@ -4,4 +4,13 @@ $color-light: #F2E4DC;
 $color-caffe: #BF9F93;
 $color-dark: #400101;
 
+/*GENERAL STYLES*/
+body {
+    background: $color-light;
+    color: $color-dark;
+}
+.App {
+    padding: 20px 30px;
+}
+
 
