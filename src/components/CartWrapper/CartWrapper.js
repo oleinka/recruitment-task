@@ -1,4 +1,5 @@
 import React from 'react';
+import CartItem from '././CartItem/CartItem'
 
 const CartWrapper = () => (
     <div className="Cart">
@@ -16,10 +17,7 @@ const CartWrapper = () => (
         </thead>
         <tbody>
           <tr>
-            <td></td>
-            <td>Biała sukienka</td>
-            <td></td>
-            <td>102,50 zł</td>
+            <CartItem/>
           </tr>
         </tbody>
       </table>
