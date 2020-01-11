@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+/* Color Theme Swatches in Hex */
+$color-brown: #8C441B;
+$color-light: #F2E4DC;
+$color-caffe: #BF9F93;
+$color-dark: #400101;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,5 +19,5 @@
   }
   
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Quicksand', sans-serif;
   }
