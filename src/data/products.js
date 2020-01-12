@@ -1,11 +1,11 @@
-import dressImage from './assets/img/dress.png';
-import hatImage from './assets/img/hat.png';
-import heelsImage from './assets/img/heels.jpg';
-import pantsImage from './assets/img/pants.jpg'; 
-import shoesImage from './assets/img/shoes.jpg';
-import sweaterStripesImage from './assets/img/sweater-stripes.jpg';
-import sweaterImage from './assets/img/sweater.png';
-import tShirtImage from './assets/img/t-shirt.jpg';
+import dressImage from '../assets/img/dress.png';
+import hatImage from '../assets/img/hat.png';
+import heelsImage from '../assets/img/heels.jpg';
+import pantsImage from '../assets/img/pants.jpg'; 
+import shoesImage from '../assets/img/shoes.jpg';
+import sweaterStripesImage from '../assets/img/sweater-stripes.jpg';
+import sweaterImage from '../assets/img/sweater.png';
+import tShirtImage from '../assets/img/t-shirt.jpg';
 
 export const products = [
     {

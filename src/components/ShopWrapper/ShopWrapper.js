@@ -1,6 +1,7 @@
 import React from 'react';
 import './ShopWrapper.scss';
 import ShopItem from './ShopItem/ShopItem';
+import { products } from '../../data/products';
 
 const ShopWrapper = () => (
     <div className="shopWrapper">
@@ -13,7 +14,11 @@ const ShopWrapper = () => (
           </select>
         </div>
         <div className="shopItemsWrapper">
-          <ShopItem/>
+          <ShopItem
+            image={products[0].image}
+            name={products[0].name}
+            price={products[0].price}
+          />
           <ShopItem/>
           <ShopItem/>
           <ShopItem/>

@@ -2,4 +2,10 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    .photoItem {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }

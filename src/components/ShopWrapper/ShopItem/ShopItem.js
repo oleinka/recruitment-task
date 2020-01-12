@@ -1,11 +1,11 @@
 import React from 'react';
 import './ShopItem.scss';
 
-const ShopItem = () => (
+const ShopItem = (props) => (
     <div className="shopItemWrapper">
-        <div>obraz</div>
-        <h5>Nazwa</h5>
-        <span>Cena</span>
+        <div className="photoItem"><img src={props.image}/></div>
+        <h5>{props.name}</h5>
+        <span>{props.price}</span>
         <button>Dodaj do koszyka</button>
     </div>
 );
