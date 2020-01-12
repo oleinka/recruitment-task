@@ -5,12 +5,8 @@ import ShopWrapper from '././components/ShopWrapper/ShopWrapper';
 
 const App = () => (
     <div className="App">
-      <div>
         <CartWrapper/>
-      </div>
-      <div>
         <ShopWrapper/>
-      </div>
     </div>
   );
 

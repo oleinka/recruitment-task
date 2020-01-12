@@ -1,6 +1,5 @@
 $color-caffe: #BF9F93;
 .shopWrapper {
-    padding: 20px;
     h1 {
         margin-bottom: 10px;
         margin-right: 30px;
@@ -16,9 +15,24 @@ $color-caffe: #BF9F93;
     }
     .shopItemsWrapper {
         display: grid;
-        grid-template-columns: repeat(4,1fr);
         grid-gap: 10px;
         padding: 20px;
         background: $color-caffe;
+    }
+}
+
+@media screen and (max-width:500px) {
+   
+}
+
+@media screen and (min-width:500px) and (max-width: 1000px) {
+    .shopItemsWrapper {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .shopItemsWrapper {
+        grid-template-columns: repeat(4,1fr);
     }
 }
