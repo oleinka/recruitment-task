@@ -1,0 +1,22 @@
+$color-caffe: #BF9F93;
+.cartWrapper {
+    padding: 20px;
+    h1 {
+        margin-bottom: 10px;
+    }
+    button {
+        padding: 10px;
+        background: $color-caffe;
+        border: none;
+    }
+    .productListWrapper table {
+        width: 100%;
+        background: $color-caffe;
+    }
+    .cartSummary {
+        background: $color-caffe;
+        display: flex;
+        justify-content: flex-end;
+        width: 50px;
+    }
+}

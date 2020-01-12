@@ -1,11 +1,12 @@
 import React from 'react';
+import './CartWrapper.scss';
 import CartItem from '././CartItem/CartItem'
 
 const CartWrapper = () => (
-    <div className="Cart">
+<div className="cartWrapper">
     <h1>Koszyk</h1>
     <button>Ukryj koszyk</button>
-    <div>
+    <div className="productListWrapper">
       <table>
         <thead>
           <tr>
@@ -22,8 +23,11 @@ const CartWrapper = () => (
         </tbody>
       </table>
     </div>
-    <div>Suma:</div>
-  </div>
+    <div className="cartSummary">
+      <div>Suma:</div>
+      <div>____</div>
+    </div>
+</div>
 );
 
 export default CartWrapper;
