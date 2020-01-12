@@ -9,9 +9,16 @@ $color-caffe: #BF9F93;
         background: $color-caffe;
         border: none;
     }
-    .productListWrapper table {
+    .productListWrapper{
+        table {
         width: 100%;
         background: $color-caffe;
+        }
+        .tableHeadings {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
     }
     .cartSummary {
         background: $color-caffe;

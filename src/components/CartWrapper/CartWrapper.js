@@ -9,7 +9,7 @@ const CartWrapper = () => (
     <div className="productListWrapper">
       <table>
         <thead>
-          <tr>
+          <tr className="tableHeadings">
             <th>Produkt</th>
             <th>Nazwa</th>
             <th>Ilość</th>
@@ -17,9 +17,7 @@ const CartWrapper = () => (
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <CartItem/>
-          </tr>
+          <CartItem/>
         </tbody>
       </table>
     </div>

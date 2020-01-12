@@ -4,9 +4,9 @@ import './CartItem.scss';
 const CartItem = () => (
     <div className="cartItemWrapper">
         <tr>
-            <td></td>
+            <td>dfsdfdssdf</td>
             <td>Biała sukienka</td>
-            <td></td>
+            <td>dfjskdhfjsd</td>
             <td>102,50 zł</td>
         </tr>
     </div>
