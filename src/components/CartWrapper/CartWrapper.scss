@@ -13,6 +13,10 @@ $color-caffe: #BF9F93;
         table {
         width: 100%;
         background: $color-caffe;
+        padding: 10px 0;
+        }
+        tbody {
+            background: #ffffff;
         }
         .tableHeadings {
             display: flex;
