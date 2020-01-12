@@ -5,8 +5,8 @@ import CartItem from '././CartItem/CartItem'
 const CartWrapper = () => (
 <div className="cartWrapper">
     <h1>Koszyk</h1>
-    <button>Ukryj koszyk</button>
-    <div className="productListWrapper">
+    <button id="cartBtn">Rozwiń koszyk</button>
+    <div className="productListWrapper hidden" id="cartDetails">
       <table>
         <thead>
           <tr className="tableHeadings">
@@ -20,10 +20,10 @@ const CartWrapper = () => (
           <CartItem/>
         </tbody>
       </table>
-    </div>
     <div className="cartSummary">
       <span>Suma:</span>
       <div className="cartTotal">____</div>
+    </div>
     </div>
 </div>
 );
