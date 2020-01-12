@@ -14,18 +14,13 @@ const ShopWrapper = () => (
           </select>
         </div>
         <div className="shopItemsWrapper">
-          <ShopItem
-            image={products[0].image}
-            name={products[0].name}
-            price={products[0].price}
+          {products.map(item => (
+            <ShopItem
+            image={item.image}
+            name={item.name}
+            price={item.price}
           />
-          <ShopItem/>
-          <ShopItem/>
-          <ShopItem/>
-          <ShopItem/>
-          <ShopItem/>
-          <ShopItem/>
-          <ShopItem/>
+          ))}
         </div>
     </div>
 );

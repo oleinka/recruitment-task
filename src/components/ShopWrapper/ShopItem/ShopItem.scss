@@ -1,7 +1,29 @@
+$color-caffe: #BF9F93;
+$color-light: #F2E4DC;
 .shopItemWrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 10px;
+    background: #ffffff;
+    .detailsItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    h3 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    span {
+        padding-bottom: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        background: $color-caffe;
+        border: none;
+        color: $color-light;
+    }
+    }
     .photoItem {
         img {
             width: 100%;
