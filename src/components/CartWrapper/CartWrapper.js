@@ -22,8 +22,8 @@ const CartWrapper = () => (
       </table>
     </div>
     <div className="cartSummary">
-      <div>Suma:</div>
-      <div>____</div>
+      <span>Suma:</span>
+      <div className="cartTotal">____</div>
     </div>
 </div>
 );
