@@ -10,9 +10,20 @@ body {
     color: $color-dark;
 }
 .App {
-    padding: 20px 30px;
     margin: 0 auto;
     max-width: 1200px;
+}
+
+@media (max-width: 500px) {
+    .App {
+        padding: 20px 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .App {
+        padding: 20px 30px;
+    }
 }
 
 
