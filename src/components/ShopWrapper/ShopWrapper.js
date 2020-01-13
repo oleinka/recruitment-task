@@ -15,10 +15,7 @@ const ShopWrapper = () => (
         </div>
         <div className="shopItemsWrapper">
           {products.map(item => (
-            <ShopItem
-            image={item.image}
-            name={item.name}
-            price={item.price}
+            <ShopItem key={item.name} {...item}
           />
           ))}
         </div>
