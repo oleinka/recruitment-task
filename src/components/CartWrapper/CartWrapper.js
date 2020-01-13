@@ -1,12 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './CartWrapper.scss';
 import CartItem from '././CartItem/CartItem'
 
-const CartWrapper = () => (
+const CartWrapper = () => {
+
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  
+
+  const toggleCart = () => {
+    if(isCartOpen){
+      setIsCartOpen(false)
+    }
+    else{
+      setIsCartOpen(true)
+    }
+  }
+
+  const getText = () => {
+    if(isCartOpen) {
+     return "Ukryj koszyk"
+    }
+    else {
+      return "Rozwiń koszyk"
+    }
+  }
+
+  return (
 <div className="cartWrapper">
     <h1>Koszyk</h1>
-    <button id="cartBtn">Rozwiń koszyk</button>
-    <div className="productListWrapper hidden" id="cartDetails">
+    <button onClick={toggleCart}>
+     {getText()}
+    </button>
+    <div className={`productListWrapper ${ isCartOpen ? "" : "hidden"}`}>
       <table>
         <thead>
           <tr className="tableHeadings">
@@ -27,5 +52,6 @@ const CartWrapper = () => (
     </div>
 </div>
 );
+}
 
 export default CartWrapper;
