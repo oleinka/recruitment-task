@@ -3,7 +3,7 @@ import './CartWrapper.scss';
 import CartItem from '././CartItem/CartItem'
 import { products } from '../../data/products';
 
-const CartWrapper = () => {
+const CartWrapper = ({shoppingCart}) => {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
   
@@ -26,7 +26,6 @@ const CartWrapper = () => {
     }
   }
 
-  let productsInCart = [2,4,5,6]
 
   return (
 <div className="cartWrapper">

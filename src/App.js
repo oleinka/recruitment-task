@@ -3,11 +3,15 @@ import './App.scss';
 import CartWrapper from '././components/CartWrapper/CartWrapper';
 import ShopWrapper from '././components/ShopWrapper/ShopWrapper';
 
-const App = () => (
+const App = () => {
+
+  const shoppingCart = []
+
+return(
     <div className="App">
-        <CartWrapper/>
+        <CartWrapper shoppingCart={shoppingCart} />
         <ShopWrapper/>
     </div>
   );
-
+}
 export default App;
