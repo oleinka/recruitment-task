@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './CartWrapper.scss';
 import CartItem from '././CartItem/CartItem'
+import { products } from '../../data/products';
 
 const CartWrapper = () => {
 
@@ -8,10 +9,10 @@ const CartWrapper = () => {
   
 
   const toggleCart = () => {
-    if(isCartOpen){
+    if(isCartOpen) {
       setIsCartOpen(false)
     }
-    else{
+    else {
       setIsCartOpen(true)
     }
   }
@@ -24,6 +25,8 @@ const CartWrapper = () => {
       return "Rozwiń koszyk"
     }
   }
+
+  let productsInCart = [2,4,5,6]
 
   return (
 <div className="cartWrapper">
@@ -47,7 +50,7 @@ const CartWrapper = () => {
       </table>
     <div className="cartSummary">
       <span>Suma:</span>
-      <div className="cartTotal">____</div>
+      <div className="cartTotal">.....</div>
     </div>
     </div>
 </div>
