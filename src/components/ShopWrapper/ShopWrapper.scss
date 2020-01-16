@@ -1,4 +1,6 @@
 $color-caffe: #BF9F93;
+$color-light: #F2E4DC;
+
 .shopWrapper {
     h1 {
         margin-bottom: 10px;
@@ -8,6 +10,7 @@ $color-caffe: #BF9F93;
         padding: 10px 20px;
         background: $color-caffe;
         border: none;
+        color: $color-light;
     }
     .shopHeading {
         display: flex;
