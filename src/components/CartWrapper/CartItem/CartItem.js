@@ -8,8 +8,8 @@ const CartItem = ({
 }) => {
     
     const handleChange = (event) => {
-        const value = event.target.value;
-        console.log(value);
+        const count = event.target.value;
+        console.log(count);
     }
     
     return (
