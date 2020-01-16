@@ -4,19 +4,21 @@ import './CartItem.scss';
 const CartItem = ({
     image,
     name,
-    price
+    price,
 }) => {
     return (
     <tr className="cartItemWrapper">
         <td>{image}</td>
         <td>{name}</td>
-        <td><div><input type='number'/></div></td>
+        <td>
+            <div>
+                <input type='number' min='0'/>
+            </div>
+        </td>
         <td>{price}</td>
         <td>x</td>
     </tr>
-
 ); 
 };
-
 
 export default CartItem;
