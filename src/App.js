@@ -5,7 +5,7 @@ import ShopWrapper from '././components/ShopWrapper/ShopWrapper';
 
 const App = () => {
 
-  const shoppingCart = []
+  const shoppingCart = [{name:'jdhsj',price:10},{name:'polo',price:30}]
 
 return(
     <div className="App">

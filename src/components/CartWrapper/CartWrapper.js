@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './CartWrapper.scss';
 import CartItem from '././CartItem/CartItem'
-import { products } from '../../data/products';
 
 const CartWrapper = ({shoppingCart}) => {
 
@@ -44,12 +43,17 @@ const CartWrapper = ({shoppingCart}) => {
           </tr>
         </thead>
         <tbody>
-          <CartItem/>
+          {shoppingCart.map(item => (
+            <CartItem key={item.name} {...item}
+          />
+          ))}
         </tbody>
       </table>
     <div className="cartSummary">
       <span>Suma:</span>
-      <div className="cartTotal">.....</div>
+      <div className="cartTotal">
+      {shoppingCart.reduce((a, c) => a.price + c.price)}
+      </div>
     </div>
     </div>
 </div>
