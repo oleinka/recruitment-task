@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import CartWrapper from '././components/CartWrapper/CartWrapper';
 import ShopWrapper from '././components/ShopWrapper/ShopWrapper';
 
 const App = () => {
-
-  const shoppingCart = [{name:'jdhsj',price:10},{name:'polo',price:30}]
+  
+  const [shoppingCart, setShoppingCart] = useState([
+    {image:"test",name:"test",price:10,count:1},
+    {image:"test1",name:"test",price:10,count:1}
+  ])
 
 return(
     <div className="App">
-        <CartWrapper shoppingCart={shoppingCart} />
+        <CartWrapper shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} />
         <ShopWrapper/>
     </div>
   );
