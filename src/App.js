@@ -5,15 +5,12 @@ import ShopWrapper from '././components/ShopWrapper/ShopWrapper';
 
 const App = () => {
   
-  const [shoppingCart, setShoppingCart] = useState([
-    {image:"test",name:"test",price:10,count:1},
-    {image:"test1",name:"test",price:10,count:1}
-  ])
+  const [shoppingCart, setShoppingCart] = useState([])
 
 return(
     <div className="App">
         <CartWrapper shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} />
-        <ShopWrapper/>
+        <ShopWrapper shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>
     </div>
   );
 }

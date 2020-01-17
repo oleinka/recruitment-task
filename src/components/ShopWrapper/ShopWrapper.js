@@ -3,7 +3,7 @@ import './ShopWrapper.scss';
 import ShopItem from './ShopItem/ShopItem';
 import { products } from '../../data/products';
 
-const ShopWrapper = () => {
+const ShopWrapper = ({shoppingCart,setShoppingCart}) => {
   
   const [productItems, setProductItems] = useState(products);
 
@@ -34,6 +34,8 @@ return (
         <div className="shopItemsWrapper">
           {productItems.map(item => (
             <ShopItem key={item.name} {...item}
+            shoppingCart={shoppingCart}
+            setShoppingCart={setShoppingCart}
           />
           ))}
         </div>

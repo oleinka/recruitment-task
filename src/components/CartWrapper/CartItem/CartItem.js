@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './CartItem.scss';
 
 const CartItem = ({
@@ -21,10 +21,22 @@ const CartItem = ({
         })
         setShoppingCart(newShoppingCart);
     }
+
+    const deleteFromCart = () => {
+        const Items=shoppingCart.filter( (item, itemIndex )=> {
+            if (index === itemIndex){
+                return false;
+            }
+            return true;
+        })
+        setShoppingCart(Items);
+    }
     
     return (
     <tr className="cartItemWrapper">
-        <td>{image}</td>
+        <td>
+            <img src={image} alt="obrazek" />
+        </td>
         <td>{name}</td>
         <td>
             <div>
@@ -33,7 +45,7 @@ const CartItem = ({
         </td>
         <td>{price}</td>
         <td>{count*price}</td>
-        <td>x</td>
+        <td><button type="button" onClick={deleteFromCart}>x</button></td>
     </tr>
 ); 
 };
