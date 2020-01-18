@@ -1,6 +1,16 @@
-.cartItemWrapper {
-    tr {
-    display: flex;
-    justify-content: space-around;
+   tr {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     } 
-}
+    .itemImage {
+        width: 100px;
+        height: auto;
+    }
+    .shopCounter input {
+        width: 50px;
+    }
+    .cart-table-cell {
+        grid-row: 1;
+        justify-self: center;
+    }

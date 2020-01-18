@@ -17,9 +17,9 @@ $color-light: #F2E4DC;
     }
     .productListWrapper{
         table {
-        width: 100%;
-        background: $color-caffe;
-        padding: 10px 0;
+            width: 100%;
+            background: $color-caffe;
+            padding: 10px 0;
         }
         tbody {
             background: #ffffff;
@@ -27,6 +27,14 @@ $color-light: #F2E4DC;
         .tableHeadings {
             justify-content: space-around;
             text-align: center;
+            th {
+                grid-row: 1;
+                justify-self: center;
+            }
+        }
+        .productItem, .tableHeadings {
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
         }
     }
     .cartSummary {

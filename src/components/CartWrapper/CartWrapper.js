@@ -39,16 +39,20 @@ const CartWrapper = ({shoppingCart,setShoppingCart}) => {
             <th>Nazwa</th>
             <th>Ilość</th>
             <th>Cena</th>
+            <th>Razem</th>
+            <th>Usuń</th>
           </tr>
         </thead>
         <tbody>
-          {shoppingCart.map((item, index) => (
+          <tr className="productItem">
+            {shoppingCart.map((item, index) => (
             <CartItem key={item.name} {...item}
             setShoppingCart={setShoppingCart}
             index={index}
             shoppingCart={shoppingCart}
           />
           ))}
+          </tr>
         </tbody>
       </table>
     <div className="cartSummary">
