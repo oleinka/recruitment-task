@@ -3,7 +3,7 @@ import './ShopWrapper.scss';
 import ShopItem from './ShopItem/ShopItem';
 import { products } from '../../data/products';
 
-const ShopWrapper = ({shoppingCart,setShoppingCart}) => {
+const ShopWrapper = ({shoppingCart,setShoppingCart,isCartOpen,setIsCartOpen}) => {
   
   const [productItems, setProductItems] = useState(products);
 
@@ -36,6 +36,8 @@ return (
             <ShopItem key={item.name} {...item}
             shoppingCart={shoppingCart}
             setShoppingCart={setShoppingCart}
+            isCartOpen={isCartOpen}
+            setIsCartOpen={setIsCartOpen}
           />
           ))}
         </div>

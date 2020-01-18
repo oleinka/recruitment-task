@@ -6,11 +6,21 @@ import ShopWrapper from '././components/ShopWrapper/ShopWrapper';
 const App = () => {
   
   const [shoppingCart, setShoppingCart] = useState([])
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
 return(
     <div className="App">
-        <CartWrapper shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} />
-        <ShopWrapper shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>
+        <CartWrapper 
+          shoppingCart={shoppingCart} 
+          setShoppingCart={setShoppingCart} 
+          isCartOpen={isCartOpen}
+          setIsCartOpen={setIsCartOpen}/>
+        <ShopWrapper 
+          shoppingCart={shoppingCart} 
+          setShoppingCart={setShoppingCart}
+          isCartOpen={isCartOpen}
+          setIsCartOpen={setIsCartOpen}
+          />
     </div>
   );
 }

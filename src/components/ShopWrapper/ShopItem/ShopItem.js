@@ -6,17 +6,19 @@ const ShopItem = ({
     name,
     price,
     shoppingCart,
-    setShoppingCart
+    setShoppingCart,
+    setIsCartOpen,
 }) => {
 
     const addToCart = () => {
         shoppingCart.push({image,name,price,count:1})
         setShoppingCart([...shoppingCart])
+        setIsCartOpen(true)
     }
 
         return (<div className="shopItemWrapper">
             <div className="photoItem">
-                <img src={image} alt="obrazek" />
+                <img src={image} alt="obrazek"/>
             </div>
             <div className="detailsItem">
                 <h3>{name}</h3>

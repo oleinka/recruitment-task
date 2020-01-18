@@ -1,11 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './CartWrapper.scss';
 import CartItem from '././CartItem/CartItem'
 
-const CartWrapper = ({shoppingCart,setShoppingCart}) => {
+const CartWrapper = ({shoppingCart,setShoppingCart,isCartOpen,setIsCartOpen}) => {
 
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  
   const toggleCart = () => {
     if(isCartOpen) {
       setIsCartOpen(false)
@@ -24,6 +22,9 @@ const CartWrapper = ({shoppingCart,setShoppingCart}) => {
     }
   }
 
+  const NewArray = shoppingCart.map((item) => {
+    return item.count*item.price;
+  })
 
   return (
 <div className="cartWrapper">
@@ -56,8 +57,7 @@ const CartWrapper = ({shoppingCart,setShoppingCart}) => {
     <div className="cartSummary">
       <span>Suma:</span>
       <div className="cartTotal">
-      {shoppingCart.length > 1 ? shoppingCart.reduce((a, c) => a.price*a.count + c.price*c.count) : 0}
-      {console.log(shoppingCart)} zł
+      {NewArray.length >= 1 ? NewArray.reduce((a, c) => a + c) : 0} zł
       </div>
     </div>
     </div>
