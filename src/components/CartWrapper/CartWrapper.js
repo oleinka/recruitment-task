@@ -44,7 +44,6 @@ const CartWrapper = ({shoppingCart,setShoppingCart}) => {
           </tr>
         </thead>
         <tbody>
-          <tr className="productItem">
             {shoppingCart.map((item, index) => (
             <CartItem key={item.name} {...item}
             setShoppingCart={setShoppingCart}
@@ -52,13 +51,13 @@ const CartWrapper = ({shoppingCart,setShoppingCart}) => {
             shoppingCart={shoppingCart}
           />
           ))}
-          </tr>
         </tbody>
       </table>
     <div className="cartSummary">
       <span>Suma:</span>
       <div className="cartTotal">
-      {shoppingCart.length >1 ? shoppingCart.reduce((a, c) => a.price*a.count + c.price*c.count).toFixed(2) : 0} zł
+      {shoppingCart.length > 1 ? shoppingCart.reduce((a, c) => a.price*a.count + c.price*c.count) : 0}
+      {console.log(shoppingCart)} zł
       </div>
     </div>
     </div>

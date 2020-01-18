@@ -33,20 +33,20 @@ const CartItem = ({
     }
     
     return (
-        <>
-        <td className="cart-table-cell">
-            <img className="itemImage" src={image} alt="obrazek" />
-        </td>
-        <td className="cart-table-cell">{name}</td>
-        <td className="cart-table-cell">
-            <div className="shopCounter">
-                <input type='number' min='1' value={count} onChange={handleChange}/>
-            </div>
-        </td>
-        <td className="cart-table-cell">{price}</td>
-        <td className="cart-table-cell">{count*price}</td>
-        <td className="cart-table-cell"><button className="deleteBtn" type="button" onClick={deleteFromCart}>x</button></td>
-        </>
+        <tr className="productItem">
+            <td className="cart-table-cell">
+                <img className="itemImage" src={image} alt="obrazek" />
+            </td>
+            <td className="cart-table-cell">{name}</td>
+            <td className="cart-table-cell">
+                <div className="shopCounter">
+                    <input type='number' min='1' value={count} onChange={handleChange}/>
+                </div>
+            </td>
+            <td className="cart-table-cell">{price}</td>
+            <td className="cart-table-cell">{count*price}</td>
+            <td className="cart-table-cell"><button className="deleteBtn" type="button" onClick={deleteFromCart}>x</button></td>
+        </tr>        
 ); 
 };
 
