@@ -45,7 +45,7 @@ const CartItem = ({
         </td>
         <td className="cart-table-cell">{price}</td>
         <td className="cart-table-cell">{count*price}</td>
-        <td className="cart-table-cell"><button type="button" onClick={deleteFromCart}>x</button></td>
+        <td className="cart-table-cell"><button className="deleteBtn" type="button" onClick={deleteFromCart}>x</button></td>
         </>
 ); 
 };

@@ -1,3 +1,5 @@
+$color-caffe: #BF9F93;
+$color-light: #F2E4DC;
    tr {
         display: flex;
         justify-content: space-around;
@@ -13,4 +15,11 @@
     .cart-table-cell {
         grid-row: 1;
         justify-self: center;
+    }
+    .deleteBtn {
+        padding: 5px 10px;
+        font-size: 20px;
+        background-color: $color-caffe;
+        color: $color-light;
+        border: none;
     }

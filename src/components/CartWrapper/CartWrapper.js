@@ -28,7 +28,7 @@ const CartWrapper = ({shoppingCart,setShoppingCart}) => {
   return (
 <div className="cartWrapper">
     <h1>Koszyk</h1>
-    <button onClick={toggleCart}>
+    <button className="openCartBtn" onClick={toggleCart}>
      {getText()}
     </button>
     <div className={`productListWrapper ${ isCartOpen ? "" : "hidden"}`}>
