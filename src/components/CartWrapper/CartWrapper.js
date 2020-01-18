@@ -34,7 +34,7 @@ const CartWrapper = ({shoppingCart,setShoppingCart,isCartOpen,setIsCartOpen}) =>
     </button>
     <div className={`productListWrapper ${ isCartOpen ? "" : "hidden"}`}>
       <table>
-        <thead>
+        <thead className={shoppingCart.length>=1 ? "": "hidden"}>
           <tr className="tableHeadings">
             <th>Produkt</th>
             <th>Nazwa</th>
@@ -45,6 +45,7 @@ const CartWrapper = ({shoppingCart,setShoppingCart,isCartOpen,setIsCartOpen}) =>
           </tr>
         </thead>
         <tbody>
+            <tr className={`emptyCartInfo ${shoppingCart.length>=1 ? "hidden": ""}`}>Twój koszyk jest pusty</tr>
             {shoppingCart.map((item, index) => (
             <CartItem key={item.name} {...item}
             setShoppingCart={setShoppingCart}
