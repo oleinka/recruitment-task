@@ -20,6 +20,7 @@ const CartItem = ({
             return item;
         })
         setShoppingCart(newShoppingCart);
+        localStorage.setItem('cart',JSON.stringify(shoppingCart))
     }
 
     const deleteFromCart = () => {

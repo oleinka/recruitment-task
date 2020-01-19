@@ -14,6 +14,7 @@ const ShopItem = ({
         shoppingCart.push({image,name,price,count:1})
         setShoppingCart([...shoppingCart])
         setIsCartOpen(true)
+        localStorage.setItem('cart',JSON.stringify(shoppingCart))
     }
 
         return (<div className="shopItemWrapper">

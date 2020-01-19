@@ -5,7 +5,10 @@ import ShopWrapper from '././components/ShopWrapper/ShopWrapper';
 
 const App = () => {
   
-  const [shoppingCart, setShoppingCart] = useState([])
+  const [shoppingCart, setShoppingCart] = useState(
+    localStorage.getItem('cart') === null ? 
+    [] : JSON.parse(localStorage.getItem('cart')));
+
   const [isCartOpen, setIsCartOpen] = useState(false);
 
 return(
