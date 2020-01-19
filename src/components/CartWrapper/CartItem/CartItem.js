@@ -31,6 +31,7 @@ const CartItem = ({
             return true;
         })
         setShoppingCart(Items);
+        localStorage.setItem('cart',JSON.stringify(Items))
     }
     
     return (
