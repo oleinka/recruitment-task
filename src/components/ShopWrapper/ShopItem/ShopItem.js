@@ -22,7 +22,7 @@ const ShopItem = ({
             </div>
             <div className="detailsItem">
                 <h3>{name}</h3>
-                <span>{price} zł</span>
+                <span>{price.toFixed(2)} zł</span>
                 <button onClick={addToCart}>Dodaj do koszyka</button>
             </div>
         </div>);

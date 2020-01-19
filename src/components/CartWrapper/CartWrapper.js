@@ -58,7 +58,7 @@ const CartWrapper = ({shoppingCart,setShoppingCart,isCartOpen,setIsCartOpen}) =>
     <div className="cartSummary">
       <span>Suma:</span>
       <div className="cartTotal">
-      {NewArray.length >= 1 ? NewArray.reduce((a, c) => a + c) : 0} zł
+      {NewArray.length >= 1 ? (NewArray.reduce((a, c) => a + c)).toFixed(2) : 0.0.toFixed(2)} zł
       </div>
     </div>
     </div>

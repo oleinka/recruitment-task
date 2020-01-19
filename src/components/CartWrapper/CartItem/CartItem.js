@@ -43,8 +43,8 @@ const CartItem = ({
                     <input type='number' min='1' value={count} onChange={handleChange}/>
                 </div>
             </td>
-            <td className="cart-table-cell">{price}</td>
-            <td className="cart-table-cell">{count*price}</td>
+            <td className="cart-table-cell">{price.toFixed(2)} zł</td>
+            <td className="cart-table-cell">{(count*price).toFixed(2)} zł</td>
             <td className="cart-table-cell"><button className="deleteBtn" type="button" onClick={deleteFromCart}>x</button></td>
         </tr>        
 ); 
