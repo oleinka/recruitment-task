@@ -9,7 +9,7 @@ const App = () => {
     localStorage.getItem('cart') === null ? 
     [] : JSON.parse(localStorage.getItem('cart')));
 
-  const [isCartOpen, setIsCartOpen] = useState(localStorage.getItem('cart') === null ? false : true);
+  const [isCartOpen, setIsCartOpen] = useState(shoppingCart.length === null ? true : false);
 
 return(
     <div className="App">
