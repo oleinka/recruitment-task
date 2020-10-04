@@ -35,20 +35,20 @@ const CartItem = ({
     }
     
     return (
-        <tr className="productItem">
-            <td className="cart-table-cell">
-                <img className="itemImage" src={image} alt="obrazek" />
-            </td>
-            <td className="cart-table-cell">{name}</td>
-            <td className="cart-table-cell">
-                <div className="shopCounter">
-                    <input type='number' min='1' value={count} onChange={handleChange}/>
-                </div>
-            </td>
-            <td className="cart-table-cell">{price.toFixed(2)} zł</td>
-            <td className="cart-table-cell">{(count*price).toFixed(2)} zł</td>
-            <td className="cart-table-cell"><button className="deleteBtn" type="button" onClick={deleteFromCart}>x</button></td>
-        </tr>        
+    <div className="productItem">
+        <div className="cart-table-cell">
+            <img className="itemImage" src={image} alt="obrazek" />
+        </div>
+        <div className="cart-table-cell">{name}</div>
+        <div className="cart-table-cell">
+            <div className="shopCounter">
+                <input type='number' min='1' value={count} onChange={handleChange}/>
+            </div>
+        </div>
+        <div className="cart-table-cell">{price.toFixed(2)} zł</div>
+        <div className="cart-table-cell">{(count*price).toFixed(2)} zł</div>
+        <div className="cart-table-cell"><button className="deleteBtn" type="button" onClick={deleteFromCart}>x</button></div>
+    </div>
 ); 
 };
 

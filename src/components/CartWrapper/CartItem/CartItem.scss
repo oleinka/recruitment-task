@@ -24,3 +24,7 @@ $color-light: #F2E4DC;
         border: none;
         cursor: pointer;
     }
+    .productItem {
+        display: flex;
+        align-items: center;
+    }
