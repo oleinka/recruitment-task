@@ -33,8 +33,12 @@ $color-light: #F2E4DC;
                 justify-self: center;
             }
         }
+        .product {
+            width: 100%;
+        }
         .emptyCartInfo {
             padding: 30px;
+            width: 100%;
         }
         .productItem, .tableHeadings {
             display: grid;
