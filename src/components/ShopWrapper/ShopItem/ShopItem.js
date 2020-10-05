@@ -17,6 +17,12 @@ const ShopItem = ({
         localStorage.setItem('cart',JSON.stringify(shoppingCart))
     }
 
+    const handleCheckItem = () => {
+        const names = shoppingCart.map(item => item.name);
+        const found = names.find(item => item === name);
+        return found;
+    }
+
         return (<div className="shopItemWrapper">
             <div className="photoItem">
                 <img src={image} alt="obrazek"/>
@@ -24,7 +30,7 @@ const ShopItem = ({
             <div className="detailsItem">
                 <h3>{name}</h3>
                 <span>{price.toFixed(2)} zł</span>
-                <button onClick={addToCart}>Dodaj do koszyka</button>
+                <button onClick={()=>handleCheckItem() === name? console.log('produkt jest już w koszyku') : addToCart() }>Dodaj do koszyka</button>
             </div>
         </div>);
     };
