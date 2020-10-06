@@ -18,9 +18,16 @@ const ShopItem = ({
     }
 
     const handleCheckItem = () => {
-        const names = shoppingCart.map(item => item.name);
-        const found = names.find(item => item === name);
+        const found = shoppingCart.map(item => item.name).find(item => item === name);
         return found;
+    }
+
+    const addCount = () => {
+        const index = shoppingCart.map(item => item.name).indexOf(name);
+        shoppingCart[index].count +=  1;
+        setShoppingCart([...shoppingCart])
+        setIsCartOpen(true)
+        localStorage.setItem('cart',JSON.stringify(shoppingCart))
     }
 
         return (<div className="shopItemWrapper">
@@ -30,7 +37,7 @@ const ShopItem = ({
             <div className="detailsItem">
                 <h3>{name}</h3>
                 <span>{price.toFixed(2)} zł</span>
-                <button onClick={()=>handleCheckItem() === name? console.log('produkt jest już w koszyku') : addToCart() }>Dodaj do koszyka</button>
+                <button onClick={()=>handleCheckItem() === name? addCount() : addToCart() }>Dodaj do koszyka</button>
             </div>
         </div>);
     };

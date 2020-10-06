@@ -12,7 +12,7 @@ const CartItem = ({
 }) => {
     
     const handleChange = (event) => {
-        const newCount = event.target.value;
+        const newCount = parseInt(event.target.value,10);
         const newShoppingCart = shoppingCart.map((item, itemIndex)=> {
             if(index === itemIndex) {
                 return {...item, count:newCount}
